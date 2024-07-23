@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Para mi Juli</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*MMxSIEMPRE</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Hola mi niña chitita!<br />
+			¿Recuerdas el día que nos conocimos?<br />
+			<span class="comments">// El jueves en ese 23C</span><br />
+			Desde ese día comenzó mm;<br />
+			<span class="comments">// Tu carita, tu voz, tu mirada tan bonita.</span><br />
+			Todo de ti quedó grabado en mi mente;<br />
+			y todo pasaba bien rapido hasta que nos dimos ese primer beso...;<br />
+			MM un 14 de mayo... ¿lo recuerdas?;<br />
+			Un amor tan genuino...;<br />
+			Hemos recorrido un largo camino juntos;<br />
+			No todo ha ido muy bien, pero seguimos de la mano de Dios ;<br />
+			<span class="comments">// Y estoy seguro que habrá más.</span><br />
+			Pero mm durara toda la vida, hoy y siempre...;<br />
+			<br>
+			<br>
+			Todo lo que quiero decir es:<br />
+			Mi pechi, te amaré por siempre... y es que asi no estes;<br />
+			<br>
+			<br>
+			Lo hare toda la vida, mi niña chitita, ADMV<br />
+			<br>
+			<span id="heartspan">
+			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					MM PARA SIEMPRE
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					TE AMO MUCHO<br/>
+					<div class="signature">- LUIS</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2022, 6, 23);
+together.setHours(16);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Tu navegador no soporta HTML5!<br/>Recomiendo usar Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
